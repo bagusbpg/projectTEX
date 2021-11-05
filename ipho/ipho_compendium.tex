@@ -489,9 +489,9 @@
 			\begin{axis}[xmin=0,xmax=90,xtick={0,10,...,90},xticklabels={0$^{\circ}$,,,30$^{\circ}$,,,60$^{\circ}$,,,90$^{\circ}$},axis x line*=bottom,ymin=0,ymax=21,ytick={0,10,20},yticklabels={,,$g$},axis y line*=left,xlabel=$\theta$,ylabel={$\alpha r,a \text{ in ms}^{-2}$},ylabel near ticks]
 			\end{axis}
 			\begin{axis}[xmin=0,xmax=90,hide x axis,ymin=0,ymax=21,axis y line*=right,ytick={0,10,20},yticklabels={,10,20},ylabel={$F,S\text{ in N}$},ylabel near ticks,ylabel style={rotate=180}]
-				\addplot [dotted] coordinates {(3.81,0) (3.81,18)};
-				\draw (38.1,190) node {$\theta_1$};
-				\addplot [dotted] coordinates {(30.96,0) (30.96,18)};
+				\addplot [dotted] coordinates {(3.81,0) (3.81,18)};
+				\draw (38.1,190) node {$\theta_1$};
+				\addplot [dotted] coordinates {(30.96,0) (30.96,18)};
 				\draw (309.6,190) node {$\theta_2=\theta_3$};
 				\addplot [domain=3.81:30.96,samples=10,blue,thick] {5.88*cos(x)-9.8*sin(x)};
 				\draw [blue] (190,37) node {$F$};
@@ -550,29 +550,102 @@
 	\end{IEEEeqnarray*}\par
 	The sum of the volumes is constant. In our case, it is 410cm$^3$. The result is valid for any number of quantities of toluene, as the mixing can be done successively adding always one more glass of liquid to the mixture.
 	\subsection*{Problem 3}
-	Parallel light rays are falling on the plane surface of a semi-cylinder made of glass, at an angle of 45$^{\circ}$, in such a plane which is perpendicular to the axis of the semi-cylinder (Figure \ref{sketch_2_3_1}). Index of refraction is $\sqrt{2}$. Where are the rays emerging out of the cylindrical surface?\\ \\
-	\textbf{Solution}\\
-	Let us use angle $\theta$ to describe the position of the rays in the glass (Figure \ref{sketch_2_3_2}). According to the law of refraction, $\frac{\sin 45^{\circ}}{\sin \beta}=\sqrt{2}$
+	Parallel light rays are falling on the plane surface of a semi-cylinder made of glass, at an angle of 45$^{\circ}$, in such a plane which is perpendicular to the axis of the semi-cylinder (Figure \ref{sketch_2_3_1}). Index of refraction is $\sqrt{2}$. Where are the rays emerging out of the cylindrical surface?
 	\begin{figure}[!hbtp]
 		\centering
 		\begin{tikzpicture}
 			\draw (0,0) arc (180:360:2);
 			\draw (0,0) -- (4,0);
-			\draw [->] (1.6,2) -- (2.6,0.5);
-			\draw [->] (1,2) -- (2,0.5);
-			\draw [->] (0.4,2) -- (1.4,0.5);
+			\draw [->] (1.6,1.2) -- (2.6,0.2);
+			\draw [->] (1,1.2) -- (2,0.2);
+			\draw [->] (0.4,1.2) -- (1.4,0.2);
 		\end{tikzpicture}
 		\caption{Sketch for Problem 3}
 		\label{sketch_2_3_1}
+	\end{figure}\\
+	\textbf{Solution}\\
+	Let us use angle $\theta$ to describe the position of the rays in the glass (Figure \ref{sketch_2_3_2}). According to the law of refraction, $\frac{\sin 45^{\circ}}{\sin \beta}=\sqrt{2}$, $\sin\beta=0.5$, $\beta=30^{\circ}$. The refracted angle is $30^{\circ}$ for all of the incoming rays. We have to investigate what happens if $\theta$ changes from $0^{\circ}$ to $180^{\circ}$.\par
+	\begin{figure}[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (0,0) arc (180:360:3);
+			\draw (3,0.5) arc (90:135:0.5);
+			\draw (2.75,0.65) node {$\alpha$};
+			\draw (2.5,0) arc (180:240:0.5);
+			\draw (2.4,-0.4) node {$\theta$};
+			\draw (3,-0.5) arc (270:300:0.5);
+			\draw (3.2,-0.75) node {$\beta$};
+			\fill (3,0) circle (0.06);
+			\draw (3.25,0.25) node {$O$};
+			\draw (0,0) -- (6,0);
+			\draw [red,thick,-|>] (-1,1) -- (-0.5,0.5);
+			\draw [red,thick] (-0.5,0.5) -- (0,0);
+			\fill (0,0) circle (0.06);
+			\draw [red,thick,->>] (0,0) -- (0.75,-1.3);
+			\draw [red,thick] (0.75,-1.3) -- (1.5,-2.6);
+			\fill (1.5,-2.6) circle (0.06);
+			\draw (1.25,-2.85) node {$B$};
+			\draw [densely dotted] (1.5,-2.6) -- (3,0);
+			\draw [red,thick,->] (1.5,-2.6) -- (1.8,-2.6);
+			\draw [red,thick] (1.8,-2.6) -- (2.5,-2.6);
+			\draw [red,thick,-|>] (-0.5,1) -- (0,0.5);
+			\draw [red,thick] (0,0.5) -- (0.5,0);
+			\fill (0.5,0) circle (0.06);
+			\draw (0.75,0.25) node {$A$};
+			\draw [red,thick,->>] (0.5,0) -- (1.36,-1.45);
+			\draw [red,thick] (1.36,-1.45) -- (2.22,-2.9);
+			\fill (2.22,-2.9) circle (0.06);
+			\draw (1.97,-3.15) node {$C$};
+			\draw [densely dotted] (2.22,-2.9) -- (3,0);
+			\draw [red,thick,->] (2.22,-2.9) -- (2.51,-2.98);
+			\draw [red,thick] (2.51,-2.98) -- (3.18,-3.16);
+			\draw [red,thick,-|>] (2,1) -- (2.5,0.5);
+			\draw [red,thick] (2.5,0.5) -- (3,0);
+			\draw [red,thick,->>] (3,0) -- (3.75,-1.3);
+			\draw [red,thick] (3.75,-1.3) -- (4.5,-2.6);
+			\fill (4.5,-2.6) circle (0.06);
+			\draw [red,thick,->] (4.5,-2.6) -- (4.65,-2.86);
+			\draw [red,thick] (4.65,-2.86) -- (5,-3.46);
+			\draw [densely dotted] (3,1) -- (3,-1);
+			\draw [red,thick,-|>] (4.45,1) -- (4.95,0.5);
+			\draw [red,thick] (4.95,0.5) -- (5.45,0);
+			\fill (5.45,0) circle (0.06);
+			\draw (5.7,0.25) node {$D$};
+			\draw [red,thick,->>] (5.45,0) -- (5.75,-0.52);
+			\draw [red,thick] (5.75,-0.52) -- (5.9,-0.77);
+			\fill (5.9,-0.77) circle (0.06);
+			\draw (6.15,-0.8) node {$E$};
+			\draw [densely dotted] (5.9,-0.77) -- (3,0);
+			\draw [red,thick,->] (5.9,-0.77) -- (5.82,-1.06);
+			\draw [red,thick] (5.82,-1.06) -- (5.64,-1.74);
+		\end{tikzpicture}
+		\caption{Auxiliary Sketch for Problem 3}
+		\label{sketch_2_3_2}
 	\end{figure}
+	It is easy to see that $\theta$ ($\angle AOB$) can not be less than $60^{\circ}$. The critical angle is given by $\sin \beta_{critical}=\frac{1}{n}=\frac{\sqrt{2}}{2}$, hence $\beta_{critical}=45^{\circ}$. In the case of total internal reflection, $\angle ACO=45^{\circ}$, hence $\theta=180^{\circ}-60^{\circ}-40^{\circ}=75^{\circ}$. If $\theta$ is more than 75$^{\circ}$, the rays can emerge the cylinder. Increasing the angle we reach the critical angle again if $\angle OED=45^{\circ}$. Thus, the rays are leaving the glass cylinder if $75^{\circ}<\theta<165^{\circ}$. CE, arc of the emerging rays, subtends a central angle of 90$^{\circ}$.
 \section*{Experimental problem}
 	\subsection*{Problem 1}
-	Three closed boxes (black boxes) with two plug sockets on each are present for investigation. The participants have to f\mbox{}ind out, without opening the boxes, what kind of elements are in them and measure their characteristic properties. AC and DC meters (their internal resistance and accuracy are given) and AC 50Hz and DC sources are put at the participants' disposal.
+	Three closed boxes (black boxes) with two plug sockets on each are present for investigation. The participants have to f\mbox{}ind out, without opening the boxes, what kind of elements are in them and measure their characteristic properties. AC and DC meters (their internal resistance and accuracy are given) and AC 50Hz and DC sources are put at the participants' disposal.\\ \\
+	\textbf{Solution}\\
+	No voltage is observed at any of the plug sockets therefore none of the boxes contains a source.\par
+	Measuring the resistances using f\mbox{}irst AC then DC, one of the boxes gives the same result. Conclusion: the box contains a simple resistor. Its resistance is determined by measurement.\par
+	One of the boxes has a very great resistance for DC but conducts AC well. It contains a capacitor, the value can be computed as $C=\frac{1}{\omega X_C}$.\par
+	The third box conducts both AC and DC, its resistance for AC is greater. It contains a resistor and an inductor connected in series. The values of the resistance and the inductance can be computed from the measurements.
 \chapter*{III IPhO (Brno, 1969)}
 \addcontentsline{toc}
 {chapter}{III IPhO (Brno, 1969)}
 \section*{Theoretical problem}
-	
+	\subsection*{Problem 1}
+	Figure \ref{sketch_3_1_1} shows a mechanical system consisting of three carts $A$, $B$ and $C$ of masses $m_1=0.3\text{kg}$, $m_2=0.2\text{kg}$, $m_3=1.5\text{kg}$, respectively. Carts $B$ and $A$ are connected by a light taut inelastic string which passes over a light smooth pulley attaches to the cart $C$ as shown. For this problem, all resistive and frictional forces may be ignored as may the moments of inertia of the pulley and of the wheels of all three carts. Take the acceleration due to gravity $g$ to be 9.81ms$^{-2}$.
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (0,0) -- (5,0);
+		\end{tikzpicture}
+		\caption{Sketch for Problem 1}
+		\label{sketch_3_1_1}
+	\end{figure}
 \section*{Experimental problem}
 \chapter*{IV IPhO (Moscow, 1970)}
 \addcontentsline{toc}
