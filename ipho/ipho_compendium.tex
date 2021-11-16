@@ -161,7 +161,7 @@
 			\draw (5,0) to[R, l=$\SI{}{R_{AB}}$] (5,2.5);
 			\draw (-0.5,0) node {B};
 			\draw (0,0) -- (5,0);
-			\draw[red] (0.5,-0.75) -- (3,-0.75) -- (3,3.25) -- (0.5,3.25) -- (0.5,-0.75); 
+			\draw[red] (0.5,-0.75) -- (3,-0.75) -- (3,3.25) -- (0.5,3.25) -- (0.5,-0.75);
 		\end{circuitikz}
 		\caption{Auxiliary sketch for Problem 2}
 		\label{sketch_1_2_3}
@@ -993,7 +993,272 @@
 {chapter}{IV IPhO (Moscow, 1970)}
 \section*{Theoretical problem}
 	\subsection*{Problem 1}
-	A long bar with mass $M=1\text{kg}$ is placed on a smooth horizontal surface of a table where it can move frictionless. A carriage equipped with a motor can slide along the upper horizontal panel of the bar, the mass of the carriage is $m=0.1\text{kg}$.
+	A long bar with mass $M=1\text{kg}$ is placed on a smooth horizontal surface of a table where it can move frictionless. A carriage equipped with a motor can slide along the upper horizontal panel of the bar, the mass of the carriage is $m=0.1\text{kg}$. The friction coef\mbox{}f\mbox{}icient of the carriage is $\mu=0.02$. The motor is winding a thread around a shaft at a constant speed $v_0=0.1\text{ms}^{-1}$. The other end of the thread is tied up to a rather distant stationary support in one case (Figure \ref{sketch_4_1_1}a), whereas in other case, it is attached to a picket at the edge of the bar (Figure \ref{sketch_4_1_1}b). While holding the bar f\mbox{}ixed, one allows the carriage to start moving at the velocity $V_0$ then the bar is set loose.\par
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (0,3.45) -- (5,3.45);
+			\draw (0.5,3.45) -- (0.5,3.95);
+			\draw (0.5,3.95) -- (2.5,3.95);
+			\draw (2.5,3.95) -- (2.5,3.45);
+			\draw (1.5,3.7) node {$M$};
+			\draw (1,3.95) -- (1,4.45);
+			\draw (1,4.45) -- (1.5,4.45);
+			\draw (1.5,4.45) -- (1.5,3.95);
+			\draw (1.25,4.2) node {$m$};
+			\fill (1.5,4.2) circle (0.08);
+			\draw (4.5,3.45) -- (4.5,4.2);
+			\fill (4.5,4.2) circle (0.08);
+			\draw [red] (1.5,4.2) -- (4.5,4.2);
+			\draw [densely dotted] (1.5,4.55) -- (1.5,4.85);
+			\draw [densely dotted] (2.5,4.05) -- (2.5,4.85);
+			\draw [<->] (1.5,4.75) -- (2.5,4.75);
+			\draw (2,5) node {$l$};
+			\draw (2.5,3) node {(a)};
+			\draw (0,0.45) -- (5,0.45);
+			\draw (1.5,0.45) -- (1.5,0.95);
+			\draw (1.5,0.95) -- (3.5,0.95);
+			\draw (3.5,0.95) -- (3.5,0.45);
+			\draw (2.5,0.7) node {$M$};
+			\draw (2,0.95) -- (2,1.45);
+			\draw (2,1.45) -- (2.5,1.45);
+			\draw (2.5,1.45) -- (2.5,.95);
+			\draw (2.25,1.2) node {$m$};
+			\fill (2.5,1.2) circle (0.08);
+			\draw (3.5,0.7) -- (3.8,0.7);
+			\draw (3.8,0.7) -- (3.8,1.2);
+			\fill (3.8,1.2) circle (0.08);
+			\draw [red] (2.5,1.2) -- (3.8,1.2);
+			\draw [densely dotted] (2.5,1.55) -- (2.5,1.85);
+			\draw [densely dotted] (3.5,1.05) -- (3.5,1.85);
+			\draw [<->] (2.5,1.75) -- (3.5,1.75);
+			\draw (3,2) node {$l$};
+			\draw (2.5,0) node {(b)};
+		\end{tikzpicture}
+		\caption{Sketch for Problem 1}
+		\label{sketch_4_1_1}
+	\end{figure}
+	By the moment the bar is released, the front edge of the carriage is at distance $l=0.5\text{m}$ from the front edge of the bar. For both cases, f\mbox{}ind the laws of movement of both the bar and the carriage and the time during which the carriage will reach the front edge of the bar.\\ \\
+	\textbf{Solution}\\
+	\emph{First Case}\\
+	By the moment of releasing the bar, the carriage has a velocity $v_0$ relative to the table and continues to move at the same velocity.\par
+	The bar, inf\mbox{}luenced by the friction force $F_{friction}=\mu mg$ from the carriage, gets an acceleration $a=\frac{F_{friction}}{M}=\frac{\mu mg}{M}$ or $a=0.02\text{ms}^{-2}$, while the velocity of the bar changes with the time according to the law $v_b=at$.\par
+	Since the bar cannot move faster than the carriage, then at a moment of time $t=t_0$, its sliding will stop, that is $v_b=v_0$. Let us determine this moment of time
+	\begin{equation*}
+		t_0=\frac{v_0}{a}=\frac{v_0M}{\mu mg}=5\text{s}
+	\end{equation*}
+	By that moment, the displacement of the $S_b$ ar and the carriage $S_c$ relative to the table will be equal to
+	\begin{IEEEeqnarray*}{rcl}
+		S_c&\text{ }=\text{ }&v_0t_0=\frac{v^2_0M}{\mu mg}\\
+		S_b&=&\frac{at^2_0}{2}=\frac{v^2_0M}{2\mu mg}
+	\end{IEEEeqnarray*}
+	The displacement of the carriage relative to the bar is equal to
+	\begin{equation*}
+		S=S_c-S_b=\frac{v^2_0M}{2\mu mg}=0.25\text{m}
+	\end{equation*}\par
+	Since $S<l$, the carriage will not reach the edge of the bar until the bar is stopped by an immovable support. The distance to the support is not indicated in the problem condition so we cannot calculate this time. Thus, the carriage is moving evenly at the velocity $v_0=0.1\text{ms}^{-1}$, whereas the bar is moving for the f\mbox{}irst 5s uniformly accelerated with an acceleration $a=0.02\text{ms}^{-1}$ and then the bar is moving with constant velocity together with the carriage.
+	\emph{Second Case}\par
+	Since there is no friction between the bar and the table surface, the system of the bodies "bar-carriage" is a closed one. For this system, one can apply the law of conservation of momentum,
+	\begin{equation*}
+		mv+Mu=mv_0
+	\end{equation*}
+	where $v$ and $u$ are projections of velocities of the carriage and the bar relative to the table onto the horizontal axis directed along the vector of the velocity $v_0$. The velocity of the thread winding $v_0$ is equal to the velocity of the carriage relative to the bar ($v-u$), that is
+	\begin{equation*}
+		v_0=v-u
+	\end{equation*}
+	Solving the above system of equations, we obtain
+	\begin{equation*}
+		u=0\text{ and }v=v_0
+	\end{equation*}\par
+	Thus, being released, the bar remains fixed relative to the table, whereas the carriage will be moving with the same velocity $v_0$ and will reach the edge of the bar within the time $t$ equal to
+	\begin{equation*}
+		t=\frac{l}{v_0}=5\text{s}
+	\end{equation*}
+	\subsection*{Problem 2}
+	A unit cell of a crystal of natrium chloride (common salt, NaCl) is a cube with the edge length $a=5.6\times10^{-10}\text{m}$ (Figure \ref{sketch_4_2_1}). The black circles in the figure stand for the position of natrium atoms, whereas the white ones are chlorine atoms. The entire crystal of common salt turns out to be a repetition of such unit cells. The relative atomic mass of natrium is 23 and that of chlorine is 35.5. The density of the common salt $\rho=2.22\times10^{3}\text{ kgm}^{-3}$. Find the mass of a hydrogen atom.
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (4,0) circle (0.15);
+			\fill (4,1) circle (0.15);
+			\draw (4,2) circle (0.15);
+			\fill (4.8,0.3) circle (0.15);
+			\draw (4.8,1.3) circle (0.15);
+			\fill (4.8,2.3) circle (0.15);
+			\draw (5.6,0.6) circle (0.15);
+			\fill (5.6,1.6) circle (0.15);
+			\draw (5.6,2.6) circle (0.15);
+			\draw [red,densely dotted] (4,0) -- (4,2);
+			\draw [red,densely dotted] (4,2) -- (5.6,2.6);
+			\draw [red,densely dotted] (5.6,2.6) -- (5.6,0.6);
+			\draw [red,densely dotted] (5.6,0.6) -- (4,0);
+			\draw [red,densely dotted] (4,1) -- (5.6,1.6);
+			\draw [red,densely dotted] (4.8,0.3) -- (4.8,2.3);
+			\draw (3,0.15) circle (0.15);
+			\fill (3,1.15) circle (0.15);
+			\draw (3,2.15) circle (0.15);
+			\fill (3.8,0.45) circle (0.15);
+			\draw (3.8,1.45) circle (0.15);
+			\fill (3.8,2.45) circle (0.15);
+			\draw (4.6,0.75) circle (0.15);
+			\fill (4.6,1.75) circle (0.15);
+			\draw (4.6,2.75) circle (0.15);
+			\draw [red,densely dotted] (3,0.15) -- (3,2.15);
+			\draw [red,densely dotted] (3,2.15) -- (4.6,2.75);
+			\draw [red,densely dotted] (4.6,2.75) -- (4.6,0.75);
+			\draw [red,densely dotted] (4.6,0.75) -- (3,0.15);
+			\draw [red,densely dotted] (3,1.15) -- (4.6,1.75);
+			\draw [red,densely dotted] (3.8,0.45) -- (3.8,2.45);
+			\draw (2,0.3) circle (0.15);
+			\fill (2,1.3) circle (0.15);
+			\draw (2,2.3) circle (0.15);
+			\draw (1.3,0.3) -- (1.7,0.3);
+			\draw (1.3,2.3) -- (1.7,2.3);
+			\draw [->] (1.5,1.5) -- (1.5,2.3);
+			\draw (1.5,1.3) node {$a$};
+			\draw [<-] (1.5,0.3) -- (1.5,1.1);
+			\fill (2.8,0.6) circle (0.15);
+			\draw (2.8,1.6) circle (0.15);
+			\fill (2.8,2.6) circle (0.15);
+			\draw (3.6,0.9) circle (0.15);
+			\fill (3.6,1.9) circle (0.15);
+			\draw (3.6,2.9) circle (0.15);
+			\draw [red,densely dotted] (2,0.3) -- (2,2.3);
+			\draw [red,densely dotted] (2,2.3) -- (3.6,2.9);
+			\draw [red,densely dotted] (3.6,2.9) -- (3.6,0.9);
+			\draw [red,densely dotted] (3.6,0.9) -- (2,0.3);
+			\draw [red,densely dotted] (2,1.3) -- (3.6,1.9);
+			\draw [red,densely dotted] (2.8,0.6) -- (2.8,2.6);
+			\draw [red,densely dotted] (2,0.3) -- (4,0);
+			\draw [red,densely dotted] (2.8,0.6) -- (4.8,0.3);
+			\draw [red,densely dotted] (3.6,0.9) -- (5.6,0.6);
+			\draw [red,densely dotted] (2,1.3) -- (4,1);
+			\draw [red,densely dotted] (2.8,1.6) -- (4.8,1.3);
+			\draw [red,densely dotted] (3.6,1.9) -- (5.6,1.6);
+			\draw [red,densely dotted] (2,2.3) -- (4,2);
+			\draw [red,densely dotted] (2.8,2.6) -- (4.8,2.3);
+			\draw [red,densely dotted] (3.6,2.9) -- (5.6,2.6);
+		\end{tikzpicture}
+		\caption{Sketch for Problem 2}
+		\label{sketch_4_2_1}
+	\end{figure}\\ \\
+	\textbf{Solution}\\
+	Let us calculate the quantities of natrium atoms ($n_1$) and chlorine atoms ($n_2$) embedded in a single NaCl unit crystal cell (Figure \ref{sketch_4_2_1}).\par
+	One atom of natrium occupies the middle of the cell and it entirely belongs to the cell. Twelve atoms of natrium hold the edges of a large cube and they belong to three more celss so as $\frac{1}{4}$ part of each belongs to the f\mbox{}irst cell. Thus, we have
+	\begin{equation*}
+		n_1=1+12\times\frac{1}{4}=4\text{ atoms of natrium per unit cell}
+	\end{equation*}\par
+	In one cell, there are 6 atoms of chlorine placed on the side of the cube and 8 placed in the vertices. Each atom from a side belongs to another cell and the atom in the vertex (to seven others). Then, for one cell we have
+	\begin{equation*}
+		n_2=6\times\frac{1}{2}+8\times\frac{1}{8}=4\text{ atoms of chlorine}
+	\end{equation*}\par
+	Thus, 4 atoms of natrium and 4 atoms of chlorine belong to one unit cell of NaCl crystal.\par
+	The mass $m$ of such a cell is equal
+	\begin{equation*}
+		m=4(m_{r,Na}+m_{r,Cl})\text{ amu}
+	\end{equation*}
+	where $m_{r,Na}$ and $m_{r,Cl}$ are relative atomic masses of natrium and chlorine. Since the mass of hydrogen atom $m_H$ is approximately equal to one atomic mass unit (amu),
+	\begin{equation*}
+		m_H=1.008\approx1\text{ amu}
+	\end{equation*}
+	then the mass of an unit cell of NaCl is
+	\begin{equation*}
+		m=4(m_{r,Na}+m_{r,Cl})m_H
+	\end{equation*}\par
+	On the other hand, it is equal to
+	\begin{equation*}
+		m=\rho a^3
+	\end{equation*}
+	Hence,
+	\begin{equation}
+		m_h=\frac{\rho a^3}{4(m_{r,Na}+m_{r,Cl})}
+	\end{equation}
+	Numerically, $m_H=1.67\times10^{-27}\text{kg}$.
+	\subsection*{Problem 3}
+	Inside a thin-walled metal sphere with radius $R=20\text{cm}$, there is a metal ball with the radius $r=10\text{cm}$ which has a common center with the sphere. The ball is connected with a very long wire to the Earth via an opening in the sphere (Figure \ref{sketch_4_3_1}). A charge $Q=10^{-8}\text{C}$ is placed onto the outside sphere. Calculate the potential of this sphere, electrical capacity of the obtained system of conducting bodies and draw out an equivalent electric scheme.
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (-0.3,0) -- (0.3,0);
+			\draw (-0.2,-0.1) -- (0.2,-0.1);
+			\draw (-0.1,-0.2) -- (0.1,-0.2);
+			\draw (0,0) -- (0,1.5);
+			\draw (0,2) circle (0.5);
+			\draw (0,2) circle (1);
+			\draw [->] (0,2) -- (-0.5,2);
+			\draw (-0.2,2.15) node {$r$};
+			\draw [->] (0,2) -- (0.8,1.4);
+			\draw (0.7,1.8) node {$R$};
+		\end{tikzpicture}
+		\caption{Sketch for Problem 3}
+		\label{sketch_4_3_1}
+	\end{figure}\\ \\
+	\textbf{Solution}\\
+	Having no charge on the ball, the sphere has the potential
+	\begin{equation*}
+		U_{0s}=\frac{1}{4\pi\epsilon_0}\frac{Q}{R}
+	\end{equation*}
+	Numerically, $U_s=450\text{V}$.\par
+	When connected with the Earth, the ball inside the sphere has the potential equal to zero, so there is an electric f\mbox{}ield between the ball and the sphere. This f\mbox{}ield moves a certain charge $q$ from the Earth to the ball. Charge $Q$, uniformly distributed on the sphere, does not create any f\mbox{}ield inside, thus the electric f\mbox{}ield inside the sphere is def\mbox{}ined by the ball's charge $q$. The potential dif\mbox{}ference between the balls and the sphere is equal
+	\begin{equation*}
+		\Delta U=U_b-U_s=\frac{1}{4\pi\epsilon_0}\Big(\frac{q}{r}-\frac{q}{R}\Big)
+	\end{equation*}\par
+	Outside the sphere, the f\mbox{}ield is the same as in the case when all the charges were placed in its center. When the ball was connected with the Earth, the potential of the sphere $U_s$ is equal
+	\begin{equation*}
+		U_s=\frac{1}{4\pi\epsilon_0}\frac{q+Q}{R}
+	\end{equation*}\par
+	The potential of the ball
+	\begin{IEEEeqnarray*}{rcl}
+		U_b&\text{ }=\text{ }&U_s+\Delta U\\
+		&=&\frac{1}{4\pi\epsilon_0}\Big(\frac{q+Q}{R}+\frac{q}{r}-\frac{a}{R}\Big)\\
+		&=&\frac{1}{4\pi\epsilon_0}\Big(\frac{Q}{R}+\frac{q}{r}\Big)=0
+	\end{IEEEeqnarray*}
+	which leads to
+	\begin{equation*}
+		q=-Q\frac{r}{R}
+	\end{equation*}\par
+	Finally, we obtain for potential of the sphere
+	\begin{equation}
+		U_s=\frac{1}{4\pi\epsilon_0}\frac{Q(R-r)}{R^2}
+	\end{equation}
+	Numerically, $U_s=225\text{V}$.\par
+	The electric capacity of whole system of conductor is
+	\begin{equation}
+		C=\frac{Q}{U_s}=\frac{4\pi\epsilon_0R^2}{R-r}
+	\end{equation}
+	Numerically, $C=44\text{pF}$.\par
+	The equivalent electric scheme consists of two parallel capacitors (Figure \ref{sketch_4_3_2})
+	\begin{enumerate}
+		\item a spherical one with charges $+q$ and $-q$ at the plates
+		\item a capacitor "sphere-Earth" with charges $+(Q-q)$ and $-(Q-q)$ at the plates
+	\end{enumerate}
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{circuitikz}
+			\draw (0,2.5) to[C] (4,2.5);
+			\draw [red,densely dotted] (2,2.5) circle (0.5);
+			\draw (1.4,3) node {$+q$};
+			\draw (2.5,3) node {$-q$};
+			\draw (0,0) to[C] (4,0);
+			\draw (1,-0.5) node {$+(Q-q)$};
+			\draw (3,-0.5) node {$-(Q-q)$};
+			\draw (0,0) -- (0,2.5);
+			\draw (4,0) -- (4,2.5);
+			\fill (4,1.25) circle (0.1);
+			\draw (4,1.25) -- (5,1.25) -- (5,0.5);
+			\draw (4.7,0.5) -- (5.3,0.5);
+			\draw (4.8,0.4) -- (5.2,0.4);
+			\draw (4.9,0.3) -- (5.1,0.3);
+		\end{circuitikz}
+		\caption{Auxiliary Sketch for Problem 3}
+		\label{sketch_4_3_2}
+	\end{figure}
+	\subsection*{Problem 4}
+	A spherical mirror is installed into a telescope. Its lateral diameter is $D=0.5\text{m}$ and the radius of the curvature $R=2\text{m}$. In the main focus of the mirror, there is an emission receiver in the form of a round disk. The disk is placed perpendicular to the optical axis of the mirror (Figure \ref{sketch_4_4_1}). What should the radius $r$ of the receiver be so that it could receive the entire flux of the emission reflected by the mirror? How would the received flux of the emission decrease if the detector's dimensions decreased by 8 times? For this problem, when calculating small values $\alpha$ $(\alpha\ll1)$, one may perform a substitution $\sqrt{1-\alpha}\approx1-\frac{\alpha}{2}$. Besides, dif\mbox{}fraction should not be taken into account.
 \chapter*{V IPhO (Sof\mbox{}ia, 1971)}
 \addcontentsline{toc}
 {chapter}{V IPhO (Sof\mbox{}ia, 1971)}
