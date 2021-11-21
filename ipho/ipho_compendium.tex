@@ -1259,9 +1259,251 @@
 	\end{figure}
 	\subsection*{Problem 4}
 	A spherical mirror is installed into a telescope. Its lateral diameter is $D=0.5\text{m}$ and the radius of the curvature $R=2\text{m}$. In the main focus of the mirror, there is an emission receiver in the form of a round disk. The disk is placed perpendicular to the optical axis of the mirror (Figure \ref{sketch_4_4_1}). What should the radius $r$ of the receiver be so that it could receive the entire flux of the emission reflected by the mirror? How would the received flux of the emission decrease if the detector's dimensions decreased by 8 times? For this problem, when calculating small values $\alpha$ $(\alpha\ll1)$, one may perform a substitution $\sqrt{1-\alpha}\approx1-\frac{\alpha}{2}$. Besides, dif\mbox{}fraction should not be taken into account.
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw [thick] (0,2) arc (150:210:4);
+			\draw (-1.2,2) -- (-0.2,2);
+			\draw (-1.2,-2) -- (-0.2,-2);
+			\draw [<->] (-1,-2) -- (-1,2);
+			\draw (-1.3,0) node {$D$};
+			\draw [densely dotted] (-0.54,0) -- (3.96,0);
+			\fill (3.46,0) circle (0.06);
+			\draw (3.46,-0.3) node {$O$};
+			\fill (1.46,0) circle (0.06);
+			\draw [thick] (1.46,0.54) -- (1.46,-0.54);
+			\draw (1.66,0.25) node {$r$};
+			\draw (1.7,-0.3) node {$F$};
+			\draw [->] (3.46,0) -- (-0.27,1.4);
+			\draw (1.7,0.95) node {$R$};
+		\end{tikzpicture}
+		\caption{Sketch for Problem 4}
+		\label{sketch_4_4_1}
+	\end{figure}\\ \\
+	\textbf{Solution}\\
+	As known, rays parallel to the main optical axis of a spherical mirror, passing at little distance from it after having been ref\mbox{}lected, join at the main focus of the mirror $F$, which is at the distance $\frac{R}{2}$ from the center $O$ of the spherical surface. Let us consider now the movement of the ray ref\mbox{}lected near the edge of the spherical mirror of large diamter $D$ (Figure \ref{sketch_4_4_2}). The angle of incidence $\alpha$ of the ray onto the surface is equal to the angle of ref\mbox{}lection. That is why the angle $OAB$ within triangle, formed by the radius $OA$ of the sphere, traced to the incidence point of the ray by the ref\mbox{}lected ray $AB$ and an intercept $BO$ of the main optical axis, is equal to $\alpha$. The angles $BOA$ and $MAO$ are equal, that is the angle $BOA$ is equal to $\alpha$.
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw [thick] (0,2) arc (150:210:4);
+			\draw (-1.2,2) -- (-0.2,2);
+			\draw (-1.2,-2) -- (-0.2,-2);
+			\draw [<->] (-1,-2) -- (-1,2);
+			\draw (-1.3,0) node {$D$};
+			\draw [densely dotted] (-0.54,0) -- (3.96,0);
+			\fill (3.46,0) circle (0.06);
+			\draw (3.76,-0.3) node {$O$};
+			\draw (2.5,0.25) node {$\alpha$};
+			\draw (2.96,0) arc (180:150:0.5);
+			\draw (3.01,0) arc (180:150:0.45);
+			\fill (1.46,0) circle (0.06);
+			\draw [thick] (1.46,0.54) -- (1.46,-0.54);
+			\draw (1.7,0.25) node {$F$};
+			\draw (1.7,-0.3) node {$r$};
+			\draw [densely dotted] (3.46,0) -- (0,2);
+			\draw (0.95,1.75) node {$\alpha$};
+			\draw (0.7,1.3) node {$\alpha$};
+			\fill (0,2) circle (0.06);
+			\draw (0.5,2) arc (360:300:0.5);
+			\draw (0.45,2) arc (360:300:0.45);
+			\draw (-0.1,2.25) node {$A$};
+			\draw (1.95,1.2) node {$R$};
+			\draw [red,->] (3.96,2) -- (2,2);
+			\fill (3.46,2) circle (0.06);
+			\draw (3.46,2.25) node {$M$};
+			\draw [red] (2,2) -- (0,2);
+			\draw [red,->] (0,2) -- (0.73,0.73);
+			\fill (1.15,0) circle (0.06);
+			\draw (1,-0.3) node {$B$};
+			\draw (0.5,0.4) node {$\beta$};
+			\draw (0.65,0) arc (180:120:0.5);
+			\draw [red] (0.73,0.73) -- (1.46,-0.54);
+			\fill (1.46,-0.54) circle (0.06);
+			\draw (1.7,-0.74) node {$C$};
+			\draw (1.46,-0.65) -- (1.46,-1.5);
+			\draw (3.46,-0.15) -- (3.46,-1.5);
+			\draw [<->] (1.46,-1.2) -- (3.46,-1.2);
+			\draw (2.46,-1.6) node {$\frac{R}{2}$};
+		\end{tikzpicture}
+		\caption{Auxiliary Sketch for Problem 4};
+		\label{sketch_4_4_2}
+	\end{figure}\par
+	Thus, the triangle $AOB$ is isosceles with its side $AB$ being equal to the side $BO$. Since the sum of the lengths of its two other sides exceeds the length of its third side, $AB+BO>OA=R$, hence $BO>\frac{R}{2}$. This means that a ray parallel to the main optical axis of the spherical mirror and passing not too close to it, after having been reflected, crosses the main optical axis at the point B lying between the focus $F$ and the mirror. The focal surface is crossed by this ray at the point $C$ which is at a certain distance $CF=r$ from the main focus.\par
+	Thus, when ref\mbox{}lecting a parallel beam of rays by a spherical mirror f\mbox{}inite in size, it does not join at the focus of the mirror, but forms a beam with radius $r$ on the focal plane.\par
+	From $\Delta BFC$, we can write
+	\begin{IEEEeqnarray*}{rcl}
+		r&\text{ }=\text{ }&BF\tan\beta\\
+		&=&BF\tan2\alpha
+	\end{IEEEeqnarray*}
+	where $\alpha$ is the maximum angle of incidence of the extreme ray onto the mirror, while $\sin\alpha=\frac{D}{2R}$.
+	\begin{IEEEeqnarray*}{rcl}
+		BF&\text{ }=\text{ }&BO-OF\\
+		&=&\frac{R}{2\cos\alpha}-\frac{R}{2}\\
+		&=&\frac{R}{2}\frac{1-\cos\alpha}{\cos\alpha}
+	\end{IEEEeqnarray*}
+	Thus,
+	\begin{equation*}
+		r=\frac{R}{2}\frac{1-\cos\alpha}{\cos\alpha}\frac{\sin2\alpha}{\cos2\alpha}
+	\end{equation*}\par
+	Let us express the values of $\cos\alpha$, $\sin2\alpha$, $\cos2\alpha$ via $\sin\alpha$ taking into account the small value of the angle $\alpha$,
+	\begin{IEEEeqnarray*}{rcl}
+		\cos\alpha&\text{ }=\text{ }&\sqrt{1-\sin^2\alpha}\approx1-\frac{\sin^2\alpha}{2}\\
+		\sin^2\alpha&=&2\sin\alpha\cos\alpha\\
+		\cos2\alpha&=&\cos^2\alpha-\sin^2\alpha=1-2\sin^2\alpha
+	\end{IEEEeqnarray*}
+	which leads to
+	\begin{equation*}
+		r=\frac{R}{2}\frac{\sin^3\alpha}{1-2\sin^2\alpha}\approx\frac{R}{2}\sin^3\alpha
+	\end{equation*}
+	With $\sin\alpha=\frac{D}{2R}$,
+	\begin{equation}
+		r\approx\frac{D^3}{16R^2}
+	\end{equation}
+	Substituting numerical data, we will obtain $r\approx1.95\times10^{-3}\text{m}\approx2\text{mm}$.\par
+	From the expression $D=\sqrt[3]{16R^2r}$, one can see that if the radius of the receiver is decreased 8 times, the transversal diameter $D'$ of the mirror, from which the light comes to the receiver, will be decreased 2 times and thus the "effective" area of the mirror will be decreased 4 times.\par
+	The radiation flux $\Phi$ reflected by the mirror and received by the receiver will also be decreased twice since $\Phi\sim S$.
+	\section*{Experimental Problem}
+	Determine the focal distances of lenses. List of instruments: three dif\mbox{}ferent lenses installed on posts, a screen bearing an image of a geometric figure, some vertical wiring also f\mbox{}ixed on the posts and a ruler.\\ \\
+	\textbf{Solution}\\
+	While looking at objects through lenses, it is easy to establish that there were given two converging lenses and a diverging one.\par
+	The peculiarity of the given problem is the absence of a white screen on the list of the equipment that is used to observe real images. The competitors were supposed to determine the position of the images by the parallax method observing the images with their eyes.\par
+	The focal distance of the converging lens may be determined by the following method.\par
+	\begin{figure*}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (-1,0) -- (5,0);
+			\draw [<->] (2,-2) -- (2,2);
+			\draw [red,thick,->] (0,0) -- (0,1);
+			\draw [red,thick,->] (4,0) -- (4,-1);
+			\draw [densely dotted,->] (0,1) -- (1,1);
+			\draw [densely dotted,->] (0,1) -- (1,0.5);
+			\draw [densely dotted,->] (0,1) -- (0.8,0.2);
+			\draw [densely dotted] (1,1) -- (2,1);
+			\draw [densely dotted] (1,0.5) -- (2,0);
+			\draw [densely dotted] (0.8,0.2) -- (1,0);
+			\draw [densely dotted,->] (2,1) -- (3.2,-0.2);
+			\draw [densely dotted,->] (2,0) -- (3,-0.5);
+			\draw [densely dotted] (1,0) -- (2,-1);
+			\draw [densely dotted,->] (2,-1) -- (3,-1);
+			\draw [densely dotted] (3.2,-0.2) -- (4,-1);
+			\draw [densely dotted] (3,-0.5) -- (4,-1);
+			\draw [densely dotted] (3,-1) -- (4,-1);
+			\draw (0,1.1) -- (0,1.5);
+			\draw [<->] (0,1.3) -- (2,1.3);
+			\draw (1,1.7) node {$d$};
+			\draw (4,0.1) -- (4,1.5);
+			\draw [<->] (2,1.3) -- (4,1.3);
+			\draw (3,1.6) node {$f$};
+			\draw [blue,thick] (4,-1.8) -- (4,-1.1);
+			\fill [blue] (4.2,-2) arc (0:180:0.2);
+			\draw (4.5,-0.7) arc (180:270:0.3);
+			\draw (4.5,-1.3) arc (180:90:0.3);
+			\draw (4.53,-0.82) arc (120:240:0.2);
+			\fill (4.48,-1) circle (0.06);
+		\end{tikzpicture}
+		\caption{Sketch for Experimental Problem}
+		\label{sketch_4_5_1}
+	\end{figure*}\par
+	Using a lens one can obtain a real image of a geometrical figure shown on the screen. The position of the real image is registered by the parallax method: if one places a vertical wire (Figure \ref{sketch_4_5_1}) to the point, in which the image is located, then at small displacements of the eye from the main optical axis of the lens, the image of this object and the wire will not diverge.\par
+	We obtain the value of focal distance $F$ from the formula of thin lens by the measured distances $d$ and $f$,
+	\begin{equation*}
+		\frac{1}{F_{1,2}}=\frac{1}{d}+\frac{1}{f}
+	\end{equation*}
+	which leads to
+	\begin{equation*}
+		F_{1,2}=\frac{df}{d+f}
+	\end{equation*}\par
+	In this method, the best accuracy is achieved in the case of $f=d$.\par
+	The competitors were not asked to make a conclusion.\par
+	The error of measuring the focal distance for each of the two converging lenses can be determined by multiple repeated measurements. The total number of points was given to those competitors who carried out not less fewer than $n=5$ measurements of the focal distance and estimated the mean value of the focal distance,
+	\begin{equation*}
+		F_{av}=\frac{1}{n}\sum_{i=1}^{n}F_i
+	\end{equation*}
+	and the absolute error,
+	\begin{equation*}
+		\Delta F=\frac{1}{n}\sum_{i=1}^{n}\Delta F_i\text{, }\Delta F_i=|F_i-F_{av}|
+	\end{equation*}
+	or root mean square error,
+	\begin{equation*}
+		\Delta F_{rms}=\frac{1}{n}\sqrt{\sum_{i=1}^{n}(\Delta F_i)^2}
+	\end{equation*}\par
+	One could calculate the error by graphic method.\par
+	Determination of the focal distance of the diverging lens can be carried out by the method of compensation. With this goal, one has to obtain a real image $S'$ of the object $S$ using a converging lens. The position of the image can be registered using the parallax method.
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (0,0) -- (7,0);
+			\draw [<->] (2,2) -- (2,-2);
+			\fill [red] (0,0) circle (0.06);
+			\draw (0,-0.5) node {$S$};
+			\draw [densely dotted,->] (0,0) -- (1,0.5);
+			\draw [densely dotted] (1,0.5) -- (2,1);
+			\draw [densely dotted,->] (2,1) -- (3.5,0.5);
+			\draw [densely dotted] (3.5,0.5) -- (5,0);
+			\draw [densely dotted,->] (0,0) -- (1,-0.5);
+			\draw [densely dotted] (1,-0.5) -- (2,-1);
+			\draw [densely dotted,->] (2,-1) -- (3.5,-0.5);
+			\draw [densely dotted] (3.5,-0.5) -- (5,0);
+			\fill [red] (5,0) circle (0.06);
+			\draw (5,-0.5) node {$S'$};
+			\draw [>-<] (4,2) -- (4,-2);
+			\fill [red] (6,0) circle (0.06);
+			\draw (6,-0.5) node {$S"$};
+			\draw [densely dotted,blue,->] (4,0.33) -- (4.67,0.22);
+			\draw [densely dotted,blue] (4.67,0.22) -- (6,0);
+			\draw [densely dotted,blue,->] (4,-0.33) -- (4.67,-0.22);
+			\draw [densely dotted,blue] (4.67,-0.22) -- (6,0);
+			\draw (5,0.1) -- (5,1);
+			\draw [<->] (4,0.7) -- (5,0.7);
+			\draw (4.5,1) node {$f$};
+			\draw (6,0.1) -- (6,2);
+			\draw [<->] (4,1.7) -- (6,1.7);
+			\draw (5,2) node {$d$};
+		\end{tikzpicture}
+		\caption{Auxiliary Sketch for Experimental Problem}
+		\label{sketch_4_5_2}
+	\end{figure}\par
+	If one places a diverging lens between the image and the converging lens, the image will be displaced. Let us f\mbox{}ind a new position of the image $S"$. Using the reversibility property of the light rays, one can admit that the light rays leave the point $S"$. Then point $S'$ is a virtual image of the pint $S"$, whereas the distances from the optical center of the concave lens to the points $S'$ and $S"$ are, respectively, the distances $f$ to the image and $d$ to the object (Figure \ref{sketch_4_5_2}). Using the formula of a thin lens, we obtain
+	\begin{equation*}
+		\frac{1}{F_3}=-\frac{1}{d}+\frac{1}{d}\text{, }F_3=-\frac{fd}{d-f}<0
+	\end{equation*}\par
+	Here, $F<0$ is the focal distance of the diverging lens. In this case, the error of measuring the focal distance can also be estimated by the method of repeated measurements similar to the case of the converging lens.\par
+	Typical results are $F_1=(22.0\pm0.4)\text{cm}$, $F_2=(12.3\pm0.3)\text{cm}$, and $F_3=(-8.4\pm0.4)\text{cm}$.
 \chapter*{V IPhO (Sof\mbox{}ia, 1971)}
 \addcontentsline{toc}
 {chapter}{V IPhO (Sof\mbox{}ia, 1971)}
+\section*{Theoretical Problem}
+	\subsection*{Problem 1}
+	A triangular prism of mass $M$ is placed one side on a frictionless horizontal plane as shown in Figure \label{sketch_5_1_1}. The other two sides are inclined with respect to the plane at angles $\alpha_1$ and $\alpha_2$, respectively. Two blocks of masses $m_1$ and $m_2$, connected by an inextensible thread, can slide without friction on the surface of the prism. The mass of the pulley, which supports the thread, is negligible. Express the acceleration $a$ of the blocks relative to the prism in terms of the acceleration $a_0$ of the prism. Find the acceleration $a_0$ of the prism in terms of quantities given and the acceleration $g$ due to gravity. At what ratio $\frac{m_1}{m_2}$, the prism will be in equilibrium?
+	\begin{figure}
+		[!hbtp]
+		\centering
+		\begin{tikzpicture}
+			\draw (0,0) -- (6.69,0);
+			\draw (1,0) -- (4,2.25) -- (5.69,0);
+			\draw (1.6,0) arc (0:37:0.6);
+			\draw (2,0.25) node {$\alpha_1$};
+			\draw (5.09,0) arc (180:127:0.6);
+			\draw (4.69,0.25) node {$\alpha_2$};
+			\draw [thick] (4,2.25) -- (4.03,2.44);
+			\draw (4.03,2.44) circle (0.11);
+			\draw [red] (2.5,1.12) -- (2.2,1.52) -- (1.7,1.15) -- (2,0.75) -- (2.5,1.12);
+			\draw (1.75,1.6) node {$m_1$};
+			\draw (2.35,1.32) -- (3.95,2.52);
+			\draw [blue] (4.85,1.12) -- (5.25,1.42) -- (5.55,1.02) -- (5.15,0.72) -- (4.85,1.12);
+			\draw (5.4,1.6) node {$m_2$};
+			\draw (5.05,1.27) -- (4.12,2.51);
+		\end{tikzpicture}
+		\caption{Sketch for Problem 1}
+	\end{figure}\\ \\
+	\textbf{Solution}\\
+	The blocks slide relative to the prism with accelerations $\vec{a_1}$ and $\vec{a_2}$, which are parallel to its sides and have the same magnitude $a$.
+	\subsection*{Problem 2}
+	A vertical glass tube of cross section $S=1.0\text{cm}^2$ contains unknown amount of hydrogen. The upper end of the tube is closed.
 \chapter*{VI IPhO (Bucharest, 1972)}
 \addcontentsline{toc}
 {chapter}{VI IPhO (Bucharest, 1972)}
